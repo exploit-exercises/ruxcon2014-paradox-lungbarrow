@@ -1,0 +1,19 @@
+
+%form.form-horizontal.well{ :method => 'POST', :action => "/login" }
+  %fieldset
+    %legend Account details
+
+    .control-group
+      %label.control-label{ :for => 'input01' }
+        Username
+      .controls
+        %input{ :type => 'text', :class => 'input-xlarge', :id => 'input01', :name => 'username' }
+    .control-group
+      %label.control-label{ :for => 'input02' }
+        Password
+      .controls
+        %input{ :type => 'password', :class => 'input-xlarge', :id => 'input02', :name => 'password' }
+    .form-actions
+      %button.btn.btn-primary{ :type => 'submit' } Login
+    
+

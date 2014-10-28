@@ -1,0 +1,21 @@
+%html
+  %head
+    %link{ :href => '/css/superhero-bootstrap.min.css', :rel => 'stylesheet' }
+    %title Lungbarrow
+  %body
+    %section{ :id => 'container', :class => 'clearfix' }
+      .hero-unit
+        %h1 #{heromsg} 
+
+      .row-fluid
+        .span12
+          - if defined? flash and not flash.nil? and not flash.empty?
+            .alert.alert-error
+              #{flash}
+            
+      .row-fluid
+        .span2
+        .span8
+          = yield
+        .span2
+
